@@ -68,7 +68,7 @@ window.onload = function() {
     avatarURL:
       "https://media.licdn.com/dms/image/v2/D4E0BAQEcO3fgdcSiEg/company-logo_200_200/company-logo_200_200/0/1688681342958/4geeksacademyes_logo?e=2147483647&v=beta&t=kGELw1vfpMAZy4w_xBhs1Hz5SYKBO35m7NI9bo3E2Sg",
     // social media bar position (position-left or position-right)
-    socialMediaPosition: "position-right",
+    socialMediaPosition: "position-left",
     // social media usernames
     twitter: null,
     github: null,

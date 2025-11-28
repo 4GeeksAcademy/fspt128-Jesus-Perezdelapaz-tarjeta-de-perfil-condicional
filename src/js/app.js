@@ -33,14 +33,23 @@ function render(variables = {}) {
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
             ${cover}
           <img src="${variables.avatarURL}" class="photo" />
-          <h1>Lucy Boilett</h1>
-          <h2>Web Developer</h2>
-          <h3>Miami, USA</h3>
-          <ul class="position-right">
-            <li><a href="https://twitter.com/4geeksacademy"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="https://github.com/4geeksacademy"><i class="fab fa-github"></i></a></li>
-            <li><a href="https://linkedin.com/school/4geeksacademy"><i class="fab fa-linkedin"></i></a></li>
-            <li><a href="https://instagram.com/4geeksacademy"><i class="fab fa-instagram"></i></a></li>
+          <h1>${variables.name || "Nombre"} ${variables.lastName ||
+    "Apellido"}</h1>         
+          <h2>${variables.role || "Puesto"}</h2>
+          <h3>${variables.city || "Ciudad"}, ${variables.country || "País"}</h3>
+          <ul class="${variables.socialMediaPosition}">
+            <li><a href="${
+              variables.twitter
+            }"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="${
+              variables.github
+            }"><i class="fab fa-github"></i></a></li>
+            <li><a href="${
+              variables.linkedin
+            }"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="${
+              variables.instagram
+            }"><i class="fab fa-instagram"></i></a></li>
           </ul>
         </div>
     `;
@@ -54,9 +63,10 @@ window.onload = function() {
     // if includeCover is true the algorithm should show the cover image
     includeCover: true,
     // this is the image's url that will be used as a background for the profile cover
-    background: "https://images.unsplash.com/photo-1511974035430-5de47d3b95da",
+    background: "https://cdn.wallpapersafari.com/14/80/ZMmAKg.png",
     // this is the url for the profile avatar
-    avatarURL: "https://randomuser.me/api/portraits/women/42.jpg",
+    avatarURL:
+      "https://media.licdn.com/dms/image/v2/D4E0BAQEcO3fgdcSiEg/company-logo_200_200/company-logo_200_200/0/1688681342958/4geeksacademyes_logo?e=2147483647&v=beta&t=kGELw1vfpMAZy4w_xBhs1Hz5SYKBO35m7NI9bo3E2Sg",
     // social media bar position (position-left or position-right)
     socialMediaPosition: "position-right",
     // social media usernames
